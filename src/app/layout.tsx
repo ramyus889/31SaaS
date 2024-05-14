@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Mooli } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import "/css/fontStyle.css";
 import "/css/Uiverse.css";
-import NavbarNextUi from "../componentsUi/NavbarNextUi";
+import Navbar from "./components/Navbar";
 
-const fontStyle = Mooli({ subsets: ["latin"], weight: "400" });
+const fontStyle = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Next Practice",
@@ -20,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={fontStyle.className}>
-        <div className="overflow-x-hidden">
-          <NavbarNextUi />
+        <div className="">
+          <Navbar />
 
           {children}
         </div>
