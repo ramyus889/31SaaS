@@ -1,6 +1,15 @@
 "use client";
 import { Tabs, Tab, Card, CardBody, CardHeader } from "@nextui-org/react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
   let tabs = [
     {
       id: 1,
@@ -116,10 +125,17 @@ export default function Home() {
       <div className="flex text-center place-content-center container px-5 max-[1000px]:mt-[80px] mt-[248px]">
         <div className="flex flex-col gap-5">
           <div className="space-y-2">
-            <h2 className="sm:text-3xl md:text-6xl text-3xl leading-[1.1] font-bold">
+            <h2
+              data-aos="fade-up"
+              className="sm:text-3xl md:text-6xl text-3xl leading-[1.1] font-bold"
+            >
               Key Features
             </h2>
-            <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7 ">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="leading-normal text-muted-foreground sm:text-lg sm:leading-7 "
+            >
               Comprehensive suite of features to launch a usable SaaS that is
               beautiful.
             </p>
@@ -128,12 +144,18 @@ export default function Home() {
             <div className="flex md:w-full sm:w-[600px] w-[340px] flex-col">
               <Tabs
                 aria-label="Dynamic tabs"
+                data-aos="fade-up"
+                data-aos-delay="400"
                 items={tabs}
                 className="flex place-content-center "
               >
                 {(item) => (
                   <Tab key={item.id} title={item.label}>
-                    <Card className="p-3">
+                    <Card
+                      data-aos="fade-up"
+                      data-aos-delay="300"
+                      className="p-3"
+                    >
                       <CardHeader className="text-2xl font-semibold leading-none tracking-tight">
                         {item.header}
                       </CardHeader>

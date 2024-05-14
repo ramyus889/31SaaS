@@ -1,17 +1,31 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
   return (
     <div id="pricing" className="">
       <div className="flex text-center place-content-center container px-5 max-[1000px]:mt-[80px] mt-[217px]">
         <div className="flex flex-col gap-5">
           <div className="space-y-2">
-            <h2 className="sm:text-3xl md:text-6xl text-3xl leading-[1.1] font-bold">
+            <h2
+              data-aos="fade-up"
+              className="sm:text-3xl md:text-6xl text-3xl leading-[1.1] font-bold"
+            >
               Pricing
             </h2>
-            <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7 ">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="leading-normal text-muted-foreground sm:text-lg sm:leading-7 "
+            >
               Invest once. Become a real founder.
             </p>
           </div>
@@ -19,11 +33,19 @@ export default function Home() {
           <div className="flex flex-wrap xl:flex-nowrap items-center bg-transparent backdrop-blur-md mx-auto mt-4 max-w-2xl rounded-lg ring-1 ring-gray-700 xl:mx-0 xl:flex xl:max-w-none">
             <div className="p-8 sm:p-10 xl:flex-auto">
               {" "}
-              <h3 className="text-black dark:text-white text-2xl font-bold tracking-tight">
+              <h3
+                data-aos="fade-up"
+                data-aos-delay="400"
+                className="text-black dark:text-white text-2xl font-bold tracking-tight"
+              >
                 {" "}
                 Lifetime Package{" "}
               </h3>{" "}
-              <p className="mt-6 text-base leading-7 text-gray-700 dark:text-gray-400">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="400"
+                className="mt-6 text-base leading-7 text-gray-700 dark:text-gray-400"
+              >
                 {" "}
                 Save time, innovate, and maximize productivity{" "}
               </p>{" "}
@@ -36,7 +58,11 @@ export default function Home() {
               </div>{" "}
               <ul className="mt-10 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-700 dark:text-gray-400">
                 {" "}
-                <li className="flex items-center gap-x-2 text-sm">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  className="flex items-center gap-x-2 text-sm"
+                >
                   {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +81,11 @@ export default function Home() {
                   </svg>{" "}
                   NextJs 14 boilerplate{" "}
                 </li>
-                <li className="flex items-center gap-x-2 text-sm">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  className="flex items-center gap-x-2 text-sm"
+                >
                   {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +104,11 @@ export default function Home() {
                   </svg>{" "}
                   Build unlimited projects{" "}
                 </li>
-                <li className="flex items-center text-left gap-x-2 text-sm">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  className="flex items-center text-left gap-x-2 text-sm"
+                >
                   {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +127,11 @@ export default function Home() {
                   </svg>{" "}
                   Stripe payment integration, <br /> checkout and webhook{" "}
                 </li>
-                <li className="flex items-center text-left gap-x-2 text-sm">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  className="flex items-center text-left gap-x-2 text-sm"
+                >
                   {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +150,11 @@ export default function Home() {
                   </svg>{" "}
                   Appwrite database and authentication{" "}
                 </li>
-                <li className="flex items-center text-left gap-x-2 text-sm">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  className="flex items-center text-left gap-x-2 text-sm"
+                >
                   {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +173,11 @@ export default function Home() {
                   </svg>{" "}
                   SEO, metadata, sitemap, JSON-LD{" "}
                 </li>
-                <li className="flex items-center text-left gap-x-2 text-sm">
+                <li
+                  data-aos="fade-right"
+                  data-aos-delay="300"
+                  className="flex items-center text-left gap-x-2 text-sm"
+                >
                   {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +198,11 @@ export default function Home() {
                 </li>{" "}
               </ul>{" "}
             </div>
-            <div className="-mt-2 p-2 xl:pr-8 xl:mt-0 w-full xl:max-w-md xl:flex-shrink-0">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="-mt-2 p-2 xl:pr-8 xl:mt-0 w-full xl:max-w-md xl:flex-shrink-0"
+            >
               <div className="rounded-xl py-10 text-center ring-1 ring-inset ting-gray-800/50 xl:flex xl:flex-col xl:justify-center xl:py-16">
                 <div className="mx-auto max-w-xs px-8">
                   <p className="mt-6 flex items-baseline justify-center gap-x-2">
