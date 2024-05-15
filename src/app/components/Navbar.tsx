@@ -12,22 +12,13 @@ import {
   Button,
 } from "@nextui-org/react";
 import NavLogoSvg from "./NavLogoSvg";
-import { FaMoon } from "react-icons/fa";
+
+import ThemeSwitcher from "../components/ThemeSwitcher";
+
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const menuItems = ["Support", "Documentation"];
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -61,9 +52,14 @@ export default function App() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <div className="flex gap-7 items-center">
-            <FaMoon size={20} />
-            <Button as={Link} href={"#"} radius="lg" className="bg-slate-900">
+          <div className="flex  items-center">
+            <ThemeSwitcher />
+            <Button
+              as={Link}
+              href={"#"}
+              radius="lg"
+              className="dark:bg-slate-900"
+            >
               Buy Now
             </Button>
           </div>
@@ -72,18 +68,7 @@ export default function App() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
+            <Link className="w-full" color="foreground" href="#" size="lg">
               {item}
             </Link>
           </NavbarMenuItem>

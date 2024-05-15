@@ -122,7 +122,7 @@ export default function Home() {
               data-aos={item.fade}
               data-aos-delay={item.delay}
               key={item.id}
-              className="border rounded-lg p-6 bg-gray-950"
+              className="dark:border bg-white shadow-md rounded-lg p-6 dark:bg-gray-950"
             >
               <div className="mb-4 flex items-center">
                 <div className="">{item.image}</div>

@@ -15,7 +15,7 @@ export default function Main() {
       <div className="container max-w-[64rem] flex flex-col gap-4 items-center">
         <div
           data-aos="fade-up"
-          className="xl:text-6xl/none sm:text-5xl text-3xl font-bold bg-gradient-to-r bg-clip-text text-transparent tracking-tighter from-white to-gray-500"
+          className="xl:text-6xl/none sm:text-5xl text-3xl font-bold bg-gradient-to-r bg-clip-text text-black dark:text-transparent  tracking-tighter  dark:from-white dark:to-gray-500"
         >
           Build a Modern Sleek SaaS in Days
         </div>
