@@ -56,6 +56,7 @@ const nextConfig = {
       "framer-motion-3d",
       "gsap",
       "recharts",
+      "react-fast-marquee",
       "simplex-noise",
       "sonner",
       "tailwind-merge",

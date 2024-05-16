@@ -30,24 +30,6 @@ export default function App() {
         <NavbarBrand>
           <NavLogoSvg />
           <p className="font-bold ps-3 pe-7">31SaaS</p>
-
-          <NavbarItem>
-            <Link
-              color="foreground"
-              className="pe-7 text-foreground/60 hover:text-foreground/80 max-[640px]:hidden"
-              href="/Support"
-            >
-              Support
-            </Link>
-          </NavbarItem>
-          <NavbarItem>
-            <Link
-              href="/Documentation"
-              className="pe-7 text-foreground/60 hover:text-foreground/80 max-[640px]:hidden"
-            >
-              Documentation
-            </Link>
-          </NavbarItem>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent justify="end">
@@ -56,7 +38,7 @@ export default function App() {
             <ThemeSwitcher />
             <Button
               as={Link}
-              href={"#"}
+              href={"#pricing"}
               radius="lg"
               className="dark:bg-slate-900"
             >
