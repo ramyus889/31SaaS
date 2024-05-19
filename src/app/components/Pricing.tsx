@@ -207,7 +207,7 @@ export default function Home() {
                 <div className="mx-auto max-w-xs px-8">
                   <p className="mt-6 flex items-baseline justify-center gap-x-2">
                     <span className="text-5xl font-bold tracking-tighter line-through">
-                      $375
+                      $374
                     </span>
                     <span>$129</span>
                     <span className="text-sm font-semibold leading-6 tracking-wide text-gray-400">
